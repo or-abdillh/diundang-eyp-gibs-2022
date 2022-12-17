@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+    .wrapper {
+        @apply w-full md:w-5/12 lg:w-4/12 md:mx-auto;
+    }
+
+    .container {
+        @apply w-full;
+    }
+
+    .btn {
+        @apply px-3 py-2 rounded-lg hover:bg-opacity-75 active:scale-90 active:outline outline-offset-2 duration-300;
+    }
+}

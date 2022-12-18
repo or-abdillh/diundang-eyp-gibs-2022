@@ -1,6 +1,6 @@
 <template>
-    <section class="p-5">
-        <Card header-title="PROTOKOL KESEHATAN">
+    <section class="px-5 py-16">
+        <Card class="bg-white" header-title="PROTOKOL KESEHATAN">
             <p data-aos="zoom-in-up" class="text-sm">
                 Guna mencegah penyebaran COVID-19 diharapkan bagi tamu undangan untuk memenuhi Protokol Kesehatan di bawah ini:
             </p>

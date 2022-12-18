@@ -1,6 +1,6 @@
 <template>
-    <section class="p-5">
-        <Card header-title="STREAMING">
+    <section class="px-5 py-16 bg-white bg-four-point-stars">
+        <Card class="bg-sapphire" header-title="STREAMING">
             <section data-aos="zoom-in-up" >
                 <a href="https://youtube.com" target="_blank" class="btn border border-gray-200 bg-tambourine flex gap-2 items-center w-fit mx-auto">
                     <i class="fa-brands fa-youtube text-red-600 text-3xl"></i>

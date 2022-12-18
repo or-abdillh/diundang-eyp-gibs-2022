@@ -1,6 +1,6 @@
 <template>
-    <section class="p-5">
-        <Card header-title="KONFIRMASI KEHADIRAN">
+    <section class="px-5 py-16">
+        <Card class="bg-white" header-title="KONFIRMASI KEHADIRAN">
             <section>
                 <p data-aos="zoom-in-up"  class="text-sm">Silahkan konfirmasi kehadiran dengan mengisi nama putra/i anda</p>
                 <form @submit.prevent="formActionHandler" class="mt-4">
@@ -11,8 +11,8 @@
                     </section>
                     <!-- status -->
                     <section data-aos="zoom-in-up"  class="flex justify-center gap-4 font-semibold">
-                        <button @click="setPresence(false)" class="btn w-full border bg-gray-100 border-tambourine">TIDAK BISA BERHADIR</button>
-                        <button @click="setPresence(true)" class="btn w-full bg-tambourine">HADIR</button>
+                        <button @click="setPresence(false)" class="btn w-full border bg-gray-100 border-tambourine disabled:opacity-25" :disabled="isProcess">TIDAK BISA BERHADIR</button>
+                        <button @click="setPresence(true)" class="btn w-full bg-tambourine disabled:opacity-25" :disabled="isProcess">HADIR</button>
                     </section>
                 </form>
             </section>
@@ -22,34 +22,38 @@
 
 <script setup>
 
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import axios from 'axios'
 import Card from '@/components/base/Card.vue'
 
+const isProcess = ref(false)
+
 const guest = reactive(
     {
-        writer: "hyuga",
+        writer: "",
         presence: false,
-        content: "End Of Year Performance 2022 - Global Islamic Boarding School",
+        content: "Absensi - End Of Year Performance 2022 - Global Islamic Boarding School",
     }
 )
 
 const setPresence = bool => guest.presence = bool
 
 // Credentials
-const baseURL = import.meta.env.VITE_BASE_URL + 'message/12'
+const baseURL = import.meta.env.VITE_BASE_URL + '/message/12'
 const headers = {
     token: import.meta.env.VITE_API_TOKEN
 }
 
 const formActionHandler = async () => {
+    isProcess.value = true;
     try {
-        await fetch(baseURL, {
-            method: 'POST',
-            headers
-        })
-        alert('Terima kasih atas konfirmasi kehadiran anda')
-    } catch(err) { console.log(err) }
+        await axios.post(baseURL, guest, { headers });
+        // success
+        alert("Terima kasih atas konfirmasi anda, pesan telah berhasil dikirimkan");
+        isProcess.value = false
+    } catch (err) {
+        alert(err);
+    }
 }
 
 </script>

@@ -1,6 +1,6 @@
 <template>
     <button @click="openInvitationHandler" 
-        class="btn bg-blue-500 text-gray-100 border border-gray-300 font-medium">
+        class="btn bg-yellow-600 text-gray-100 border border-gray-300 font-medium">
         <i v-if="isOpened" class="fa-solid fa-envelope-open mr-1"></i>
         <i v-else class="fa-solid fa-envelope mr-1"></i>
         Buka Undangan
@@ -15,11 +15,18 @@ import axios from 'axios'
 const emits = defineEmits(['invitation:opened'])
 const isOpened = ref(false)
 
-const openInvitationHandler = () => {
+// Credentials
+const baseURL = import.meta.env.VITE_BASE_URL + '/visit/12'
+const headers = {
+    token: import.meta.env.VITE_API_TOKEN
+}
+
+const openInvitationHandler = async () => {
     isOpened.value = true
-    setTimeout(() => {
+    try {
+        await axios.post( baseURL, { headers } )
         emits('invitation:opened')
-    }, 500);
+    } catch(err) { console.log(err) }
 }
 
 </script>

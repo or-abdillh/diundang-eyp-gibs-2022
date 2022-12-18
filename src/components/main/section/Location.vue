@@ -1,5 +1,5 @@
 <template>
-    <section class="px-5 pb-5 text-center text-gray-100">
+    <section class="px-5 py-16 bg-four-point-stars text-center text-sapphire bg-gray-50">
         <h2 class="text-xl font-bold mb-4">
             <i class="fa-solid fa-map"></i>
             <br>

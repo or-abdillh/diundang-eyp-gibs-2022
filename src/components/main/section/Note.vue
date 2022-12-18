@@ -1,6 +1,6 @@
 <template>
-    <section class="p-5">
-        <Card header-title="CATATAN">
+    <section class="px-5 py-16">
+        <Card class="bg-white" header-title="CATATAN">
             <section>
                 <template v-for="(note, x) in notes" :key="x">
                     <div data-aos="zoom-in-up" class="flex items-start gap-5 mb-4 border-b border-gray-200 pb-3">

@@ -2,13 +2,19 @@
     <main class="bg-four-point-stars">
         <main class="animate__animated animate__bounceInUp wrapper min-h-screen">
             <!-- main frame -->
-            <section class="relative w-full min-h-screen translate-y-20 rounded-t-[15rem] bg-tufts-blue bg-texture border-t-[1rem] border-gray-200">
+            <section class="relative w-full min-h-screen translate-y-20 rounded-t-[15rem] bg-sapphire bg-texture border-t-[1rem] border-gray-200">
                 <section class="p-8">
                     <EYP data-aos="flip-up" class="w-3/12 mx-auto rounded mb-10"></EYP>
                     <!-- Copywriters -->
                     <section class="text-center mb-5">
-                        <p class="text-gray-100 text-lg">Sehubungan dengan pelaksanaan kegiatan</p>
-                        <EYPCurveLogo></EYPCurveLogo>
+                        <p class="text-gray-100 text-lg">
+                            <strong>Bismillahirrahmanirrahim</strong>
+                            <br><br>
+                            <strong>Assalamu'alaikum wr.wb</strong>
+                            <br>
+                            Tanpa mengurangi rasa hormat, dengan ini mengundang Bapak/Ibu untuk menghadiri persembahan oleh putra putri SMP-SMA Global Islamic Boarding School, pada acara:
+                        </p>
+                        <EYPCurveLogo class="mt-16"></EYPCurveLogo>
                         <section class="-translate-y-10">
                             <festiveStar class="w-4/12 mx-auto fill-gray-100 mb-5"></festiveStar>
                             <p class="text-gray-100">
@@ -21,9 +27,9 @@
                     <!-- Information -->
                     <section class="flex justify-center gap-4">
                         <!-- Date -->
-                        <section class="relative flex items-center gap-2 text-gray-100 font-sans w-fit px-4 pt-6 pb-4 rounded-lg bg-tufts-blue bg-opacity-50 backdrop-blur border">
+                        <section class="relative flex items-center gap-2 text-gray-100 font-sans w-fit px-4 pt-6 pb-4 rounded-lg bg-sapphire bg-opacity-50 backdrop-blur border">
                             <!-- icon -->
-                            <span class="absolute -top-4 left-2/4 -translate-x-2/4 shadow-lg bg-gray-100 text-tufts-blue h-8 w-8 ring-4 ring-tufts-blue rounded-full grid place-items-center"><i class="fa-solid fa-calendar"></i></span>
+                            <span class="absolute -top-4 left-2/4 -translate-x-2/4 shadow-lg bg-gray-100 text-sapphire h-8 w-8 ring-4 ring-sapphire rounded-full grid place-items-center"><i class="fa-solid fa-calendar"></i></span>
                             <span>
                                 <h1 class="text-4xl font-bold">24</h1>
                             </span>
@@ -33,9 +39,9 @@
                             </span>
                         </section>
                         <!-- Time -->
-                        <section class="relative text-center text-gray-100 font-sans w-fit px-4 pt-6 pb-4 rounded-lg bg-tufts-blue bg-opacity-50 backdrop-blur border">
+                        <section class="relative text-center text-gray-100 font-sans w-fit px-4 pt-6 pb-4 rounded-lg bg-sapphire bg-opacity-50 backdrop-blur border">
                             <!-- icon -->
-                            <span class="absolute -top-4 left-2/4 -translate-x-2/4 shadow-lg bg-gray-100 ring-4 ring-tufts-blue text-tufts-blue h-8 w-8 rounded-full grid place-items-center"><i class="fa-solid fa-clock"></i></span>
+                            <span class="absolute -top-4 left-2/4 -translate-x-2/4 shadow-lg bg-gray-100 ring-4 ring-sapphire text-sapphire h-8 w-8 rounded-full grid place-items-center"><i class="fa-solid fa-clock"></i></span>
                             <span>
                                 <p class="font-semibold">07:30 WITA - SELESAI</p>
                             </span>
@@ -45,9 +51,9 @@
                 </section>
                 <!-- decoration -->
                 <section data-aos="zoom-in-up"  class="relative">
-                    <WaveAnimated class="bg-tufts-blue bg-texture"></WaveAnimated>
+                    <WaveAnimated class="bg-sapphire bg-texture"></WaveAnimated>
                     <Countdown class="absolute top-20 left-2/4 w-10/12 -translate-x-2/4"></Countdown>
-                    <WaveAnimated class="bg-tufts-blue bg-texture rotate-180"></WaveAnimated>
+                    <WaveAnimated class="bg-sapphire bg-texture rotate-180"></WaveAnimated>
                 </section>
                 <!-- end of decoration -->
                 <!-- All section -->
@@ -61,7 +67,11 @@
                 </section>
                 <!-- End of All section -->
                 <footer class="p-5 text-center text-white">
-                    <p data-aos="zoom-in-up" class="mb-10">Demikian undangan ini kami sampaikan. Atas perhatian dan kehadiran Bapak/Ibu kami ucapkan terima kasih</p>
+                    <p data-aos="zoom-in-up" class="mb-10">
+                        Suatu kehormatan bagi kami, apabila Bapak/Ibu berkenan hadir untuk mendukung acara ini. Atas perhatian dan kehadirannya kami ucapkan terima kasih. 
+                        <br>
+                        Wassalamu'alaykum wr.wb
+                    </p>
                     <p data-aos="zoom-in-up" class="mb-12">
                         Salam Hormat,
                         <br>

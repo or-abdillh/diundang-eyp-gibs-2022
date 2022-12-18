@@ -1,5 +1,5 @@
 <template>
-    <main class="bg-falling-triangles" style="background-color: #427ac1;">
+    <main class="bg-falling-triangles" style="background-color: #222061;">
         <section class="min-h-screen wrapper">
             <!-- Hasnur and GIBS logo -->
             <section class="flex justify-center">
@@ -21,7 +21,7 @@
             <!-- End of EYP GIBS Logo -->
             <!-- CTA -->
             <section class="animate__animated animate__bounceInUp text-center mb-6">
-                <p class="text-gray-50 font-semibold uppercase">Kepada</p>
+                <p class="text-gray-50 font-semibold uppercase">Kepada Yth.</p>
                 <h1 class="text-2xl text-white font-semibold">{{ $route.query.to || "Fulan bin Fulan" }}</h1>
                 <OpenInvitation @invitation:opened="emits('page:closed', 'mainCover')" class="mt-5"></OpenInvitation>
             </section>

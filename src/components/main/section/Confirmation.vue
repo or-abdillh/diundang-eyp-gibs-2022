@@ -1,5 +1,5 @@
 <template>
-    <section v-if="$route.query.vip === ''" class="p-5">
+    <section class="p-5">
         <Card header-title="KONFIRMASI KEHADIRAN">
             <section>
                 <p data-aos="zoom-in-up"  class="text-sm">Silahkan konfirmasi kehadiran dengan mengisi nama putra/i anda</p>

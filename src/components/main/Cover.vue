@@ -57,7 +57,7 @@
                     <Rundown></Rundown>
                     <Note></Note>
                     <Streaming></Streaming>
-                    <Confirmation></Confirmation>
+                    <Confirmation v-if="$route.query.vip !== null"></Confirmation>
                 </section>
                 <!-- End of All section -->
                 <footer class="p-5 text-center text-white">

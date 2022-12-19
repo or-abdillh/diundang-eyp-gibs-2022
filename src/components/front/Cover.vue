@@ -2,12 +2,12 @@
     <main class="bg-falling-triangles" style="background-color: #222061;">
         <section class="min-h-screen wrapper">
             <!-- Hasnur and GIBS logo -->
-            <section class="flex justify-center">
+            <section class="flex  justify-center gap-1">
                 <section class="animate__animated animate__bounceInDown w-7/12 p-4 bg-white shadow rounded-b-2xl flex justify-between outline outline-offset-4 outline-gray-300">
-                    <div class="w-8/12">
+                    <div class="w-6/12">
                         <img src="/img/hasnur-centre-logo.png" alt="Hasnur Centre Logo">
                     </div>
-                    <div class="w-6/12">
+                    <div class="w-[47%]">
                         <img src="/img/gibs-logo.png" alt="Hasnur Centre Logo">
                     </div>
                 </section>

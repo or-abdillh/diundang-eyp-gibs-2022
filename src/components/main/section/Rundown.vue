@@ -18,8 +18,8 @@
 import Card from '@/components/base/Card.vue'
 
 const rundowns = [
-    'Registrasi', 'Pembukaan', 'Pembacaan Doa', 'Tahfidz Al Qur\'an',
-    'Sambutan - sambutan', 'Penutupan', 'Pembagian Rapor'
+    'Registrasi', 'Pembukaan', 'Pembacaan Doa', 'Tahfidz',
+    'Sambutan', 'Performance', 'Penutupan', 'Pembagian Rapor'
 ]
 
 </script>

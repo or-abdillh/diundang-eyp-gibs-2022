@@ -18,7 +18,7 @@
 import Card from '@/components/base/Card.vue'
 
 const notes = [
-    "Undangan hanya berlaku untuk orang tua/wali siswa SMP SMA GIBS maksimum 2 orang",
+    "Undangan hanya berlaku untuk orang tua/wali siswa SMP-SMA GIBS maksimum 2 orang",
     "Orang tua/wali dimohon hadir tepat waktu",
     "Registrasi dibuka pukul 07:30 WITA dan acara di mulai pukul 08:30 WITA",
     "Orang tua/wali berpakaian rapi dan bebas pantas",

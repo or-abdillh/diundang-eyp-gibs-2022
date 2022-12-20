@@ -14,7 +14,7 @@
                             <br>
                             Tanpa mengurangi rasa hormat, dengan ini mengundang Bapak/Ibu untuk menghadiri persembahan oleh
                             <br>
-                            putra/i SMP-SMA
+                            Putra dan Putri SMP-SMA
                             <br>
                             Global Islamic Boarding School, 
                             <br>

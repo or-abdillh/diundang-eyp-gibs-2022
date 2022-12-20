@@ -12,7 +12,9 @@
                             <br><br>
                             <strong>Assalamu'alaikum wr.wb</strong>
                             <br>
-                            Tanpa mengurangi rasa hormat, dengan ini mengundang Bapak/Ibu untuk menghadiri persembahan oleh putra putri SMP-SMA 
+                            Tanpa mengurangi rasa hormat, dengan ini mengundang Bapak/Ibu untuk menghadiri persembahan oleh
+                            <br>
+                            putera puteri SMP-SMA
                             <br>
                             Global Islamic Boarding School, 
                             <br>
@@ -22,7 +24,9 @@
                         <section class="-translate-y-10">
                             <festiveStar class="w-4/12 mx-auto fill-gray-100 mb-5"></festiveStar>
                             <p class="text-gray-100">
-                                Yang diselenggarakan oleh <strong>Global Islamic Boarding School,</strong>
+                                Yang diselenggarakan oleh
+                                <br> 
+                                <strong>Global Islamic Boarding School,</strong>
                                 maka dengan ini kami mengundang Bapak/Ibu untuk dapat berhadir pada:
                             </p>
                         </section>

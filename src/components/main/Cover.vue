@@ -27,7 +27,7 @@
                                 Yang diselenggarakan oleh
                                 <br> 
                                 <strong>Global Islamic Boarding School,</strong>
-                                maka dengan ini kami mengundang Bapak/Ibu untuk dapat berhadir pada:
+                                maka dengan ini kami mengundang Bapak/Ibu untuk dapat hadir pada:
                             </p>
                         </section>
                     </section>

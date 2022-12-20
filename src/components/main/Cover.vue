@@ -74,7 +74,7 @@
                     <p data-aos="zoom-in-up" class="mb-10">
                         Suatu kehormatan bagi kami, apabila Bapak/Ibu berkenan hadir untuk mendukung acara ini. Atas perhatian dan kehadirannya kami ucapkan terima kasih. 
                         <br>
-                        Wassalamu'alaikum
+                        Wassalamu'alaikum Wr. Wb
                     </p>
                     <p data-aos="zoom-in-up" class="mb-12">
                         Salam Hormat,

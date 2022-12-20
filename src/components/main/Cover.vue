@@ -42,6 +42,7 @@
                                 <h1 class="text-4xl font-bold">24</h1>
                             </span>
                             <span>
+                                <small>SABTU</small>
                                 <p class="leading-3 font-semibold">DESEMBER</p>
                                 <p class="tracking-widest">2022</p>
                             </span>

@@ -16,7 +16,7 @@ const emits = defineEmits(['invitation:opened'])
 const isOpened = ref(false)
 
 // Credentials
-const baseURL = import.meta.env.VITE_BASE_URL + '/visit/12'
+const baseURL = import.meta.env.VITE_BASE_URL + 'traffic/end-of-year-performance-gibs-2022'
 const headers = {
     token: import.meta.env.VITE_API_TOKEN
 }

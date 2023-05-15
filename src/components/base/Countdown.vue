@@ -14,7 +14,8 @@
 
 <script setup>
 
-import { reactive } from 'vue'
+import { reactive, onMounted } from 'vue'
+import axios from 'axios'
 import moment from 'moment'
 import OverlapHeaderTitle from '@/components/base/OverlapHeaderTitle.vue'
 
@@ -22,18 +23,27 @@ const countdown = reactive({
     hari: 2, jam: 12, menit: 45, detik: 23
 })
 
-const targetDate = new Date('2022-12-24T07:30').getTime()
-const now = new Date().getTime()
-let diff = targetDate - now
-let duration = moment.duration( diff, 'millisecond' )
+onMounted( async () => {
 
-setInterval(() => {
-    duration = moment.duration( diff, 'millisecond' )
-    countdown.hari = duration.days()
-    countdown.jam = duration.hours()
-    countdown.menit = duration.minutes()
-    countdown.detik = duration.seconds()
-    diff -= 1000
-}, 1000);
+    const URL = import.meta.env.VITE_BASE_URL + 'event/end-of-year-performance-gibs-2022'
+    const headers = {
+        token: import.meta.env.VITE_API_TOKEN
+    }
+
+    const res = await axios.get(URL, { headers })
+
+    const now = new Date().getTime()
+    let diff = new Date( res?.data?.results?.event?.detail?.start ).getTime() - now
+    let duration = moment.duration( diff, 'millisecond' )
+    
+    setInterval(() => {
+        duration = moment.duration( diff, 'millisecond' )
+        countdown.hari = duration.days()
+        countdown.jam = duration.hours()
+        countdown.menit = duration.minutes()
+        countdown.detik = duration.seconds()
+        diff -= 1000
+    }, 1000);
+})
 
 </script>

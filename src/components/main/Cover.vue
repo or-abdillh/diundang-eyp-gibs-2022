@@ -12,14 +12,9 @@
                             <br><br>
                             <strong>Assalamu'alaikum wr.wb</strong>
                             <br>
-                            Tanpa mengurangi rasa hormat, dengan ini mengundang Bapak/Ibu untuk menghadiri persembahan oleh
-                            <br>
-                            Putra dan Putri SMP-SMA
-                            <br>
-                            Global Islamic Boarding School, 
-                            <br>
-                            pada acara:
+                            {{ event?.detail?.greet }}
                         </p>
+                        
                         <EYPCurveLogo class="mt-16"></EYPCurveLogo>
                         <section class="-translate-y-10">
                             <festiveStar class="w-4/12 mx-auto fill-gray-100 mb-5"></festiveStar>
@@ -39,12 +34,12 @@
                             <!-- icon -->
                             <span class="absolute -top-4 left-2/4 -translate-x-2/4 shadow-lg bg-gray-100 text-sapphire h-8 w-8 ring-4 ring-sapphire rounded-full grid place-items-center"><i class="fa-solid fa-calendar"></i></span>
                             <span>
-                                <h1 class="text-4xl font-bold">24</h1>
+                                <h1 class="text-4xl font-bold">{{ moment(event?.detail?.start).date() }}</h1>
                             </span>
                             <span>
-                                <small>SABTU</small>
-                                <p class="leading-3 font-semibold">DESEMBER</p>
-                                <p class="tracking-widest">2022</p>
+                                <small>{{ moment(event?.detail?.start).format('dddd').toUpperCase() }}</small>
+                                <p class="leading-3 font-semibold">{{ moment(event?.detail?.start).format('MMMM').toUpperCase() }}</p>
+                                <p class="tracking-widest">{{ moment(event?.detail?.start).year() }}</p>
                             </span>
                         </section>
                         <!-- Time -->
@@ -52,7 +47,7 @@
                             <!-- icon -->
                             <span class="absolute -top-4 left-2/4 -translate-x-2/4 shadow-lg bg-gray-100 ring-4 ring-sapphire text-sapphire h-8 w-8 rounded-full grid place-items-center"><i class="fa-solid fa-clock"></i></span>
                             <span>
-                                <p class="font-semibold">07:30 WITA - SELESAI</p>
+                                <p class="font-semibold">{{ moment(event?.detail?.start).format('HH:mm') }} WITA - SELESAI</p>
                             </span>
                         </section>
                     </section>
@@ -61,16 +56,16 @@
                 <!-- decoration -->
                 <section data-aos="zoom-in-up"  class="relative">
                     <WaveAnimated class="bg-sapphire bg-texture"></WaveAnimated>
-                    <Countdown class="absolute top-20 left-2/4 w-10/12 -translate-x-2/4"></Countdown>
+                    <Countdown :target="new Date(event?.detail?.start).getTime()" class="absolute top-20 left-2/4 w-10/12 -translate-x-2/4"></Countdown>
                     <WaveAnimated class="bg-sapphire bg-texture rotate-180"></WaveAnimated>
                 </section>
                 <!-- end of decoration -->
                 <!-- All section -->
                 <section class="flex flex-col gap-8">
-                    <Location></Location>
+                    <Location :name="event?.detail?.location_name" :map="event?.detail?.location_map"></Location>
                     <HealthProtocol></HealthProtocol>
-                    <Rundown></Rundown>
-                    <Note></Note>
+                    <Rundown :lists="event?.rundowns"></Rundown>
+                    <Note :lists="event?.rules"></Note>
                     <Streaming></Streaming>
                     <Confirmation v-if="$route.query.vip !== null"></Confirmation>
                 </section>
@@ -97,6 +92,9 @@
 
 <script setup>
 
+import axios from 'axios'
+import { onMounted, ref } from 'vue'
+import moment from 'moment'
 import EYP from '@/components/base/EYP.vue'
 import EYPCurveLogo from '@/components/base/EYPCurveLogo.vue'
 import Countdown from '@/components/base/Countdown.vue'
@@ -109,5 +107,20 @@ import Confirmation from '@/components/main/section/Confirmation.vue'
 import WaveAnimated from '@/components/animated/WaveAnimated.vue'
 import Diundang from '@/components/base/Diundang.vue'
 import festiveStar from '@/assets/svg/festive-star.svg'
+
+moment().locale('id')
+
+const event = ref()
+
+onMounted( async () => {
+
+    const URL = import.meta.env.VITE_BASE_URL + 'event/end-of-year-performance-gibs-2022'
+    const headers = {
+        token: import.meta.env.VITE_API_TOKEN
+    }
+
+    const res = await axios.get(URL, { headers })
+    event.value = res.data.results.event
+})
 
 </script>

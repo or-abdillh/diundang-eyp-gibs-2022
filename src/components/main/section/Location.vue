@@ -6,19 +6,26 @@
             LOKASI ACARA
         </h2>
         <p class="text-sm">
-            Gedung Indoor, Kampus SMP - SMA Global Islamic Boarding School
-            <br>
-            Jl. Trans Kalimantan, Sungai Lumbah, Alalak, Kab. Barito Kuala
+            {{ props?.name }}
         </p>
         <!-- iframe -->
         <div class="mt-8 mapouter">
             <div class="gmap_canvas">
-                <iframe class="w-full rounded-lg" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=GIBS&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <iframe class="w-full rounded-lg" height="500" id="gmap_canvas" :src="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 <a href="https://www.embedgooglemap.net"></a>
             </div>
         </div>
     </section>
 </template>
+
+<script setup>
+
+const props = defineProps({
+    name: String,
+    map: String
+})
+
+</script>
 
 <style scoped>
 

@@ -4,10 +4,10 @@ import router from '@/router/index.js'
 import AOS from 'aos'
 
 import '@/style.css'
-import 'animate.css'
-import 'aos/dist/aos.css'
+// import 'animate.css'
+// import 'aos/dist/aos.css'
 
-AOS.init()
+// AOS.init()
 
 createApp(App)
     .use( router )

@@ -1,5 +1,5 @@
 <template>
-    <audio ref="audioEl" autoplay>
+    <audio ref="audioEl">
         <source src="https://drive.google.com/uc?id=1aosP7QNNU4be74Hou76aXeA-y26Wekbl&export=download" type="audio/mp3">
     </audio>
     <button style="height: 40px; width: 40px" 

@@ -39,21 +39,18 @@ const guest = reactive(
 const setPresence = bool => guest.presence = bool
 
 // Credentials
-const baseURL = import.meta.env.VITE_BASE_URL + 'message/end-of-year-performance-gibs-2022'
 const headers = {
-    token: import.meta.env.VITE_API_TOKEN
+    token: import.meta.env.VITE_TOKEN
 }
 
 const formActionHandler = async () => {
     isProcess.value = true;
     try {
-        await axios.post(baseURL, guest, { headers });
+        await axios.post(import.meta.env.VITE_MESSAGE_API, guest, { headers });
         // success
         alert("Terima kasih atas konfirmasi anda, pesan telah berhasil dikirimkan");
         isProcess.value = false
-    } catch (err) {
-        alert(err);
-    }
+    } catch (err) { console.log(err) }
 }
 
 </script>

@@ -25,9 +25,9 @@ const countdown = reactive({
 
 onMounted( async () => {
 
-    const URL = import.meta.env.VITE_BASE_URL + 'event/end-of-year-performance-gibs-2022'
+    const URL = import.meta.env.VITE_EVENT_API
     const headers = {
-        token: import.meta.env.VITE_API_TOKEN
+        token: import.meta.env.VITE_TOKEN
     }
 
     const res = await axios.get(URL, { headers })

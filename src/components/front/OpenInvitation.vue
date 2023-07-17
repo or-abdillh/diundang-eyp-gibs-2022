@@ -16,15 +16,15 @@ const emits = defineEmits(['invitation:opened'])
 const isOpened = ref(false)
 
 // Credentials
-const baseURL = import.meta.env.VITE_BASE_URL + 'traffic/end-of-year-performance-gibs-2022'
 const headers = {
-    token: import.meta.env.VITE_API_TOKEN
+    token: import.meta.env.VITE_TOKEN
 }
 
+// Record Traffic
 const openInvitationHandler = async () => {
     isOpened.value = true
     try {
-        await axios.post( baseURL, { headers } )
+        await axios.post( import.meta.env.VITE_TRAFFIC_API, { headers } )
         emits('invitation:opened')
     } catch(err) { console.log(err) }
 }
